@@ -15,7 +15,8 @@ package singleton
  * -> null 인 경우에만 동기화를 통해 한 개의 인스턴스만 만들 것을 보장한다.
  *
  * Problem. 하지만 자바의 out of order writes 문제로 인해 초기화 되지 않은 인스턴스를 리턴하는 문제가 생길 수 있다.
- * : uniqueInstance = God(count++) 실행에서 God 생성자 전에 uniqueInstance 는 notnull 이 되어 다른 스레드에서 초기화되지 않은 인스턴스를 리턴받을 수 있다고 한다.
+ * -> 늦은 초기화로 볼 수 있는 메모리 이점은 볼 수 없지만 선언과 함께 초기화를 통해 문제를 해결할 수 있다.
+ * -> 또는 getInstance 동기화하고 이로 인한 성능 저하를 양보한다. (Commit 2a6be41e)
  *
  */
 
