@@ -5,6 +5,7 @@ class God(private val index: Int) {
     companion object {
         private var uniqueInstance: God? = null
 
+        @Synchronized
         fun getInstance(): God {
             uniqueInstance ?: run {
                 uniqueInstance = God(count++)

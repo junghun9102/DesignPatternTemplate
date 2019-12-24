@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e76b87b-02c5-4fa5-b37e-891493885da3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/singleton/God.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/singleton/Town.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/singleton/World.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/singleton/WorldTest.kt" afterDir="false" />
+    <list default="true" id="5cf49ebb-5a73-456a-81e6-57ba6fe443d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/singleton/God.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/singleton/God.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/singleton/WorldTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/singleton/WorldTest.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
