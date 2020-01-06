@@ -1,5 +1,9 @@
 package strategy
 
+import strategy.ducks.DecoyDuck
+import strategy.ducks.MallardDuck
+import strategy.ducks.RubberDuck
+
 /**
  *
  * Scenario
@@ -7,13 +11,12 @@ package strategy
  * MallardDuck 청둥오리, RedheadDuck 아메리카흰죽지, RubberDuck 고무오리, DecoyDuck 미끼용 모형 오리
  *
  * Problem : 메소드를 변경할 일이 많은 경우 상속의 문제점
- * 날지 못하는 RubberDuck 은 fly 메소드에서 날지 못하도록 override 했다.
- * 날지 못하고 울지 못하는 DecoyDuck 은 fly, quack 메소드에서 아무일을 하지 않도록 override 했다.
+ * -> 변경이 많은 코드와 없는 코드를 부분 분리한다. quack, fly / display, swim
+ * -> 변경이 많이 일어나는 코드를 캡슐화한다. QuackBehavior, FlyBehavior
  *
- * 만약 계속해서 추가되는 오리들이 날지 못하고 울지 못하면 모두 override 해야 할까?
- *
- * 누가봐도 비효율적이여 보인다.
- * 코드 중복이 생기고 오버라이딩으로 인해 코드가 분산되어 신경 써야할 부분이 많아진다.
+ * Definition
+ * 알고리즘군을 정의하고 각각을 캡슐화하여 교환해서 사용할 수 있도록 만든다.
+ * 스트래티지를 활용하면 알고리즘을 사용하는 클라이언트와는 독립적으로 알고리즘을 변경할 수 있다.
  *
  */
 
