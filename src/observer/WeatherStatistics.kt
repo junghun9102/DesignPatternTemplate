@@ -5,14 +5,18 @@ import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.HashMap
 
-class WeatherStatistics {
+class WeatherStatistics(weatherData: Subject<WeatherData>) : Observer<WeatherData> {
+
+    init {
+        weatherData.registerObserver(this)
+    }
 
     private val temperatureData: HashMap<Long, Float> = HashMap()
     private val humidityData: HashMap<Long, Float> = HashMap()
     private val pressureData: HashMap<Long, Float> = HashMap()
 
-    fun update(weatherData: WeatherData) {
-        collectData(weatherData)
+    override fun update(data: WeatherData) {
+        collectData(data)
     }
 
     private fun collectData(weatherData: WeatherData) {
@@ -33,5 +37,4 @@ class WeatherStatistics {
             .let(::println)
     }
 
-    private fun getDateStr(time: Long) = SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(Date(time))
 }

@@ -1,13 +1,15 @@
 package observer
 
-import java.lang.StringBuilder
+class WeatherBroadcast(weatherData: Subject<WeatherData>) : Observer<WeatherData> {
 
-class WeatherBroadcast {
+    init {
+        weatherData.registerObserver(this)
+    }
 
     private lateinit var weatherData: WeatherData
 
-    fun update(weatherData: WeatherData) {
-        this.weatherData = weatherData
+    override fun update(data: WeatherData) {
+        this.weatherData = data
 
         broadcast()
     }
